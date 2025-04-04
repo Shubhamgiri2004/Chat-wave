@@ -27,7 +27,7 @@ const ChatRoom: React.FC<ChatRoomProps> = ({ roomId, username, onLeaveRoom }) =>
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
 
     //socket connection 
-    socketRef.current = new WebSocket("ws://localhost:8080");
+    socketRef.current = new WebSocket("https://chat-wave-myac.onrender.com");
 
     socketRef.current.onmessage = (event) => {
       const data = JSON.parse(event.data);
